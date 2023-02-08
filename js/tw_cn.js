@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function translateInitialization() {
-    toggle_lang = document.getElementById('tool').firstElementChild
+    toggle_lang = document.getElementById('tool').child('.toggle-lang')
 
     if (toggle_lang) {
       if (currentEncoding !== targetEncoding) {
