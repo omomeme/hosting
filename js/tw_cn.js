@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentEncoding = defaultEncoding
   const targetEncodingCookie = 'translate-chn-cht'
   let targetEncoding =
-    isNaN(store.get(targetEncodingCookie))
+    isNaN(localStorage.getItem(targetEncodingCookie))
       ? defaultEncoding
-      : Number(store.get('translate-chn-cht'))
+      : Number(localStorage.getItem('translate-chn-cht'))
 
   let toggle_lang
 
@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
       currentEncoding = 1
       targetEncoding = 2
       toggle_lang.innerHTML = tips_traditional
-      store.set(targetEncodingCookie, targetEncoding)
+      localStorage.setItem(targetEncodingCookie, targetEncoding)
       translateBody()
     } else if (targetEncoding === 2) {
       currentEncoding = 2
       targetEncoding = 1
       toggle_lang.innerHTML = tips_simplified
-      store.set(targetEncodingCookie, targetEncoding)
+      localStorage.setItem(targetEncodingCookie, targetEncoding)
       translateBody()
     }
   }
