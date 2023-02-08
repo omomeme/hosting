@@ -1,4 +1,7 @@
 /* eslint-disable no-undef */
+//
+// Simplified and Traditional Translation
+//
 document.addEventListener('DOMContentLoaded', function () {
   const defaultEncoding = 2 // 網站默認語言，1: 繁體中文, 2: 簡體中文
   const translateDelay = 0 // 延遲時間,若不在前, 要設定延遲翻譯時間, 如100表示100ms,默認為0
